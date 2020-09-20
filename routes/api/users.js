@@ -113,5 +113,9 @@ router.get(
     return res.json(req.user);
   }
 );
+// @route   POST /api/users/forgotPassword
+// @desc    Reset Password
+// @access  Public
+
 
 module.exports = router;
