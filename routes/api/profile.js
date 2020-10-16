@@ -137,7 +137,7 @@ router.post(
     Profile.findOne({ user: req.user.id }).then((profile) => {
       if (profile) {
         // Update
-        Profile.findOneAndUpdate(
+        Profile.useFindAndModify(
           { user: req.user.id },
           { $set: profileFields },
           { new: true }
